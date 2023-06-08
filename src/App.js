@@ -42,11 +42,10 @@ const SkillMatrix = () => {
       const partColor = isActive ? colors[i] : 'transparent';
       const partStyle = {
         backgroundColor: partColor,
-        transform: `rotate(${i * 90}deg)`
+        transform: `rotate(${i * 180}deg)`
       };
       circleParts.push(<div key={i} className="circle-part" style={partStyle} />);
     }
-
     return circleParts;
   };
 
@@ -85,6 +84,5 @@ const SkillMatrix = () => {
     </div>
   );
 };
-
 
 export default SkillMatrix;
