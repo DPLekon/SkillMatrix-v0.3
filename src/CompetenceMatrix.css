@@ -1,0 +1,68 @@
+.competence-matrix {
+  text-align: center;
+  margin: 20px;
+}
+
+.competence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.competence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.competence-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.competence-level {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.competence-level-low {
+  background-color: #f15946;
+  color: #fff;
+}
+
+.competence-level-medium {
+  background-color: #f7941d;
+  color: #fff;
+}
+
+.competence-level-high {
+  background-color: #f9ca24;
+  color: #fff;
+}
+
+.competence-level-very-high {
+  background-color: #00b894;
+  color: #fff;
+}
+
+.competence-level-expert {
+  background-color: #00cec9;
+  color: #fff;
+}
+
+.rating-buttons {
+  margin-top: 10px;
+}
+
+.rating-buttons button {
+  margin: 5px;
+  font-size: 14px;
+  padding: 5px 10px;
+}
