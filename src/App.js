@@ -123,14 +123,14 @@ const SkillMatrix = () => {
   };
 
   const renderCircleParts = (rating) => {
-    const colors = ['green', 'green', 'green', 'green', ];
+    const colors = ['green', 'green', 'green', 'green'];
     const circleParts = [];
 
     for (let i = rating - 1; i >= 0; i--) {
       const partColor = colors[i];
       const partStyle = {
         backgroundColor: partColor,
-        transform: `rotate(${i * 90}deg)`
+        transform: `rotate(${i * 270}deg)`
       };
       circleParts.push(<div key={i} className="circle-part" style={partStyle} />);
     }
