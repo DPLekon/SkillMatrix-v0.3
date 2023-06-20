@@ -1,4 +1,8 @@
 /* SkillMatrix.css */
+body {
+  background-color: #E6ECF2;
+}
+
 .skill-matrix {
   display: flex;
   flex-direction: column;

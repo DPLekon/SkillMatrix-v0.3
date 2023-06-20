@@ -13,6 +13,26 @@ const SkillMatrix = () => {
         { id: 4, name: 'Skill 4', rating: 4 },
       ],
     },
+    {
+      id: 2,
+      name: 'Ledoc User 2',
+      skills: [
+        { id: 1, name: 'Skill 1', rating: 3 },
+        { id: 2, name: 'Skill 2', rating: 4 },
+        { id: 3, name: 'Skill 3', rating: 2 },
+        { id: 4, name: 'Skill 4', rating: 2 },
+      ],
+    },
+    {
+      id: 3,
+      name: 'Ledoc User 3',
+      skills: [
+        { id: 1, name: 'Skill 1', rating: 4 },
+        { id: 2, name: 'Skill 2', rating: 4 },
+        { id: 3, name: 'Skill 3', rating: 3 },
+        { id: 4, name: 'Skill 4', rating: 4 },
+      ],
+    },
     // Add more users here
   ]);
 
