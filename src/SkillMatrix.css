@@ -139,6 +139,10 @@ input[type="text"] {
   transition: border-color 0.3s ease;
 }
 
+/* input[type="text"] {
+
+} */
+
 input[type="text"]:focus {
   outline: none;
   border-color: #007bff;

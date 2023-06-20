@@ -20,7 +20,7 @@ const SkillMatrix = () => {
         { id: 1, name: 'Skill 1', rating: 3 },
         { id: 2, name: 'Skill 2', rating: 4 },
         { id: 3, name: 'Skill 3', rating: 2 },
-        { id: 4, name: 'Skill 4', rating: 2 },
+        { id: 4, name: 'Skill 4', rating: 0 },
       ],
     },
     {
@@ -96,7 +96,13 @@ const SkillMatrix = () => {
     const newUser = {
       id: Date.now(),
       name: 'New User',
-      skills: [{ id: Date.now() + 1, name: 'New Skill', rating: 1 }],
+      skills: [
+        // { id: Date.now() + 1, name: 'New Skill', rating: 0},
+        { id: 1, name: 'New Skill', rating: 0},
+        { id: 2, name: 'New Skill', rating: 0},
+        { id: 3, name: 'New Skill', rating: 0},
+        { id: 4, name: 'New Skill', rating: 0},
+      ],
     };
     setUsers([...users, newUser]);
   };
@@ -156,7 +162,7 @@ const SkillMatrix = () => {
                       handleRatingChange(
                         user.id,
                         skill.id,
-                        Math.max(skill.rating - 1, 1)
+                        Math.max(skill.rating - 1, 0)
                       )
                     }
                   >
