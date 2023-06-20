@@ -5,7 +5,7 @@ const SkillMatrix = () => {
   const [users, setUsers] = useState([
     {
       id: 1,
-      name: 'User 1',
+      name: 'Ledoc User',
       skills: [
         { id: 1, name: 'Skill 1', rating: 1 },
         { id: 2, name: 'Skill 2', rating: 2 },
@@ -87,7 +87,7 @@ const SkillMatrix = () => {
   };
 
   const renderCircleParts = (rating) => {
-    const colors = ['green', 'green', 'green', 'green'];
+    const colors = ['#3a5b78', '#3a5b78', '#3a5b78', '#3a5b78'];
     const circleParts = [];
 
     for (let i = rating - 1; i >= 0; i--) {

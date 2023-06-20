@@ -1,105 +1,141 @@
-  .skill-matrix {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .user-skills {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    margin: 10px;
-  }
-  
-  .skill-circle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    width: 200px; /* Adjust width as needed */
-  }
-  
-  .circle {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: red;
-    overflow: hidden;
-    margin-top: 10px;
-  }
-  
-  .circle-part {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    border-radius: 0 0 0% 0;
-    transform-origin: 100% 100%;
-    transition: background-color 0.3s ease;
-  }
+/* SkillMatrix.css */
+.skill-matrix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .skill-circles {
-    display: flex;
-  }
+.user-skills {
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-name input[type="text"] {
+  margin-left: 10px;
+  padding: 5px;
+  /* border: 1px solid #ccc; */
+  border: none;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+.user-name input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
   
-  .rating-buttons {
-    display: flex;
-    margin-top: 10px;
-  }
+}
+
+.remove-user,
+.remove-skill {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.skill-circles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 200px;
+}
+
+.circle {
+  position: relative;
+  /* width: 150px;
+  height: 150px; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 3px solid #ccc;
   
-  .rating-buttons button {
-    margin: 0 5px;
-    padding: 5px 10px;
-  }
-  
-  .remove-skill {
-    margin-top: 10px;
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .add-skill-button {
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .remove-user {
-    margin-top: 20px;
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .add-user-button {
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
-  }
-  
-  input[type="text"]:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
+}
+
+.circle:hover {
+  border-color: #3a5b78;
+  transition:  0.5s ease;
+}
+
+
+.circle-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  /* border-radius: 0 100% 0 0; */
+  transform-origin: 100% 100%;
+  transition: background-color 0.3s ease;
+}
+
+.rating-buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.rating-buttons button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #3a5b78;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.add-skill-button,
+.add-user-button {
+  margin-top: 20px;
+  background-color:   #3a5b78;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.remove-skill {
+  margin-top: 10px;
+}
+
+.remove-skill,
+.remove-user,
+.add-skill-button,
+.add-user-button {
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  /* border: 1px solid #ccc; */
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
