@@ -128,26 +128,36 @@ const SkillMatrix = () => {
     return circleParts;
   };
 
-  return (
-    <div className="skill-matrix">
-      {users.map((user) => (
-        <div key={user.id} className="user-skills">
-          <div className="user-name">
-            <input
-              type="text"
-              value={user.name}
-              onChange={(event) => handleUserNameChange(user.id, event.target.value)}
-            />
+return (
+  <div className="skill-matrix">
+    {users.map((user, index) => (
+      <div key={user.id} className="user-skills">
+        <div className="user-name">
+          <input
+            type="text"
+            value={user.name}
+            onChange={(event) => handleUserNameChange(user.id, event.target.value)}
+          />
             <button
               className="remove-user"
               onClick={() => handleRemoveUser(user.id)}
             >
               Remove User
             </button>
-          </div>
-          <div className="skill-circles">
-            {user.skills.map((skill) => (
-              <div key={skill.id} className="skill-circle">
+        </div>
+        <div className="skill-circles">
+          {user.skills.map((skill) => (
+            <div key={skill.id} className="skill-circle">
+              {index !== 0 ? (
+                <input
+                  type="text"
+                  style={{ display: 'none' }}
+                  value={skill.name}
+                  onChange={(event) =>
+                    handleSkillChange(user.id, skill.id, event.target.value)
+                  }
+                />
+              ) : (
                 <input
                   type="text"
                   value={skill.name}
@@ -155,50 +165,51 @@ const SkillMatrix = () => {
                     handleSkillChange(user.id, skill.id, event.target.value)
                   }
                 />
-                <div className="circle">{renderCircleParts(skill.rating)}</div>
-                <div className="rating-buttons">
-                  <button
-                    onClick={() =>
-                      handleRatingChange(
-                        user.id,
-                        skill.id,
-                        Math.max(skill.rating - 1, 0)
-                      )
-                    }
-                  >
-                    -
-                  </button>
-                  <button
-                    onClick={() =>
-                      handleRatingChange(
-                        user.id,
-                        skill.id,
-                        Math.min(skill.rating + 1, 4)
-                      )
-                    }
-                  >
-                    +
-                  </button>
-                </div>
+              )}
+              <div className="circle">{renderCircleParts(skill.rating)}</div>
+              <div className="rating-buttons">
                 <button
+                  onClick={() =>
+                    handleRatingChange(
+                      user.id,
+                      skill.id,
+                      Math.max(skill.rating - 1, 0)
+                    )
+                  }
+                >
+                  -
+                </button>
+                <button
+                  onClick={() =>
+                    handleRatingChange(
+                      user.id,
+                      skill.id,
+                      Math.min(skill.rating + 1, 4)
+                    )
+                  }
+                >
+                  +
+                </button>
+              </div>
+              <button
                   className="remove-skill"
                   onClick={() => handleRemoveSkill(user.id, skill.id)}
                 >
                   Remove Skill
-                </button>
-              </div>
-            ))}
-          </div>
+              </button>
+            </div>
+          ))}
+      </div>
           <button className="add-skill-button" onClick={() => handleAddSkill(user.id)}>
             Add Skill
           </button>
-        </div>
-      ))}
-      <button className="add-user-button" onClick={handleAddUser}>
-        Add User
-      </button>
-    </div>
-  );
+      </div>
+    ))}
+    <button className="add-user-button" onClick={handleAddUser}>
+      Add User
+    </button>
+  </div>
+);
 };
 
 export default SkillMatrix;
