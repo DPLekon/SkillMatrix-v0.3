@@ -97,7 +97,6 @@ const SkillMatrix = () => {
       id: Date.now(),
       name: 'New User',
       skills: [
-        // { id: Date.now() + 1, name: 'New Skill', rating: 0},
         { id: 1, name: 'New Skill', rating: 0},
         { id: 2, name: 'New Skill', rating: 0},
         { id: 3, name: 'New Skill', rating: 0},
@@ -213,4 +212,3 @@ return (
 };
 
 export default SkillMatrix;
-

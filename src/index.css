@@ -1,15 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body {
+  background-color: #E6ECF2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.skill-matrix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-name input[type="text"] {
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+.user-name input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  
+}
+
+.remove-user,
+.remove-skill {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.skill-circles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 200px;
+}
+
+.circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 3px solid #ccc;
+  
+}
+
+.circle:hover {
+  border-color: #3a5b78;
+  transition:  0.5s ease;
 }
 
 
+.circle-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 100% 100%;
+  transition: background-color 0.3s ease;
+}
+
+.rating-buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.rating-buttons button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #3a5b78;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.add-skill-button,
+.add-user-button {
+  margin-top: 20px;
+  background-color:   #3a5b78;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.remove-skill {
+  margin-top: 10px;
+}
+
+.remove-skill,
+.remove-user,
+.add-skill-button,
+.add-user-button {
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+} */
