@@ -95,7 +95,7 @@ const SkillMatrix = () => {
   const handleAddUser = () => {
     const newUser = {
       id: Date.now(),
-      name: 'New User',
+      name: 'New Ledoc User',
       skills: [
         { id: 1, name: 'New Skill', rating: 0},
         { id: 2, name: 'New Skill', rating: 0},
